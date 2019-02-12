@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         ballCount = 0;
         if (outCount == 3) {
             outCount = 0;
+            toggleButton.setChecked(toggleButton.isChecked()?false:true);
         }
         displayChangesOnScoreborad();
     }
