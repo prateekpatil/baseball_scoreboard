@@ -189,6 +189,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="32dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:backgroundTint="#98FB98"
         android:onClick="teamSelectionOnToggle"
         android:textOff="GUEST"
         android:textOn="HOME" />
@@ -199,6 +201,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="32dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:backgroundTint="#FF0000"
         android:onClick="resetScore"
         android:text="RESET" />
 </RelativeLayout>
