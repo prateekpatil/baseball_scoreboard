@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
     private int strikeCount = 0;
     private int outCount = 0;
     private int guestTeamRuns = 0;
-    private int inningCount =0;
-    private int homeTeamRuns =0;
+    private int inningCount = 0;
+    private int homeTeamRuns = 0;
     private ToggleButton toggleButton;
 
     @Override
@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void outOnClick(View view) {
-        outCount+=1;
-        strikeCount=0;
-        ballCount=0;
+        outCount += 1;
+        strikeCount = 0;
+        ballCount = 0;
         if (outCount == 3) {
-            outCount=0;
+            outCount = 0;
         }
         displayChangesOnScoreborad();
     }
@@ -44,14 +44,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void strikeOnClick(View view) {
-        strikeCount+=1;
-        if(strikeCount==3){
-            strikeCount=0;
-            ballCount=0;
+        strikeCount += 1;
+        if (strikeCount == 3) {
+            strikeCount = 0;
+            ballCount = 0;
             outOnClick(view);
         }
         displayChangesOnScoreborad();
     }
+
     public void displayStrikeCount(int score) {
         TextView scoreView = (TextView) findViewById(R.id.strike_count);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/LED.Font.ttf");
@@ -60,10 +61,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ballOnClick(View view) {
-        ballCount+=1;
-        if(ballCount==4){
-            strikeCount=0;
-            ballCount=0;
+        ballCount += 1;
+        if (ballCount == 4) {
+            strikeCount = 0;
+            ballCount = 0;
         }
         displayChangesOnScoreborad();
     }
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void guestOnClick(View view) {
-        if(!toggleButton.isChecked()) {
+        if (!toggleButton.isChecked()) {
             guestTeamRuns += 1;
         }
         displayChangesOnScoreborad();
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void inningOnClick(View view) {
-        inningCount+=1;
+        inningCount += 1;
         displayChangesOnScoreborad();
     }
 
@@ -103,8 +104,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void homeOnclick(View view) {
-        if(toggleButton.isChecked()){
-        homeTeamRuns +=1;
+        if (toggleButton.isChecked()) {
+            homeTeamRuns += 1;
         }
         displayChangesOnScoreborad();
     }
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    private void displayChangesOnScoreborad(){
+    private void displayChangesOnScoreborad() {
         displayBallCount(ballCount);
         displayStrikeCount(strikeCount);
         displayOutCount(outCount);
@@ -126,10 +127,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void teamSelectionOnToggle(View view) {
-        if(toggleButton.isChecked()){
-            Toast.makeText(MainActivity.this,"HOME",Toast.LENGTH_SHORT ).show();
-        }else {
-            Toast.makeText(MainActivity.this,"GUEST",Toast.LENGTH_SHORT ).show();
+        if (toggleButton.isChecked()) {
+            Toast.makeText(MainActivity.this, "HOME", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(MainActivity.this, "GUEST", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -138,8 +139,8 @@ public class MainActivity extends AppCompatActivity {
         strikeCount = 0;
         outCount = 0;
         guestTeamRuns = 0;
-        inningCount =0;
-        homeTeamRuns =0;
+        inningCount = 0;
+        homeTeamRuns = 0;
         displayChangesOnScoreborad();
 
     }

@@ -25,12 +25,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/button_bg_rounded_corners"
                 android:gravity="center"
+                android:onClick="guestOnClick"
                 android:text="GUEST "
                 android:textColor="@android:color/white"
-                android:textSize="70sp"
-                android:background="@drawable/button_bg_rounded_corners"
-                android:onClick="guestOnClick"/>
+                android:textSize="70sp" />
 
             <TextView
                 android:id="@+id/guest_count"
@@ -56,12 +56,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/button_bg_rounded_corners"
                 android:gravity="center"
+                android:onClick="inningOnClick"
                 android:text="INNING"
                 android:textColor="@android:color/white"
-                android:textSize="70sp"
-                android:background="@drawable/button_bg_rounded_corners"
-                android:onClick="inningOnClick"/>
+                android:textSize="70sp" />
 
             <TextView
                 android:id="@+id/inning_count"
@@ -73,7 +73,7 @@
                 android:gravity="center"
                 android:text=""
                 android:textColor="@android:color/holo_red_dark"
-                android:textSize="48sp"/>
+                android:textSize="48sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -88,12 +88,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/button_bg_rounded_corners"
                 android:gravity="center"
+                android:onClick="homeOnclick"
                 android:text="HOME  "
                 android:textColor="@android:color/white"
-                android:textSize="70sp"
-                android:background="@drawable/button_bg_rounded_corners"
-                android:onClick="homeOnclick"/>
+                android:textSize="70sp" />
 
             <TextView
                 android:id="@+id/home_count"
@@ -105,8 +105,7 @@
                 android:gravity="center"
                 android:text=""
                 android:textColor="@android:color/holo_red_dark"
-                android:textSize="48sp"
-                />
+                android:textSize="48sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -123,9 +122,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/button_bg_rounded_corners"
             android:onClick="ballOnClick"
-            android:text="BALL"
-            android:background="@drawable/button_bg_rounded_corners"/>
+            android:text="BALL" />
 
         <TextView
             android:id="@+id/ball_count"
@@ -144,9 +143,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/button_bg_rounded_corners"
             android:onClick="strikeOnClick"
-            android:text="STRIKE"
-            android:background="@drawable/button_bg_rounded_corners"/>
+            android:text="STRIKE" />
 
         <TextView
             android:id="@+id/strike_count"
@@ -165,9 +164,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/button_bg_rounded_corners"
             android:onClick="outOnClick"
-            android:text="Out"
-            android:background="@drawable/button_bg_rounded_corners"/>
+            android:text="Out" />
 
         <TextView
             android:id="@+id/out_count"
@@ -182,26 +181,17 @@
             android:textSize="28sp" />
     </LinearLayout>
 
-
-    <!--<Switch-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@+id/middlePanel"-->
-        <!--android:layout_marginTop="50dp"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:text="Android Switch Button 1"/>-->
-
     <ToggleButton
         android:id="@+id/togglebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="32dp"
         android:layout_alignRight="@id/reset"
-        android:textOn="HOME"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:onClick="teamSelectionOnToggle"
         android:textOff="GUEST"
-        android:onClick="teamSelectionOnToggle" />
+        android:textOn="HOME" />
 
     <Button
         android:id="@+id/reset"
