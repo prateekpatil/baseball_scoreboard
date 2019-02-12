@@ -11,6 +11,9 @@ public class MainActivity extends AppCompatActivity {
     int ballCount = 0;
     int strikeCount = 0;
     int outCount = 0;
+    int guestRun = 0;
+    int inning =0;
+    int homeRun=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,5 +75,16 @@ public class MainActivity extends AppCompatActivity {
         displayBallCount(ballCount);
         displayStrikeCount(strikeCount);
         displayOutCount(outCount);
+    }
+
+    public void resetScore(View view) {
+        ballCount = 0;
+        strikeCount = 0;
+        outCount = 0;
+        guestRun = 0;
+        inning =0;
+        homeRun=0;
+        displayChangesOnScoreborad();
+
     }
 }
